@@ -31,7 +31,7 @@ namespace StateEnergyViewer
             }
 
             WebClient client = new WebClient();
-            Stream data = client.OpenRead("http://api.eia.gov/series/?api_key=23B1A392921466341345C4D25C26B7C2&series_id=SEDS.TETCB." + state + ".A");
+            Stream data = client.OpenRead("http://api.eia.gov/series/?api_key=YOUR_KEY_HERE&series_id=SEDS.TETCB." + state + ".A");
             StreamReader reader = new StreamReader(data);
 
             SimpleTextParser parser = new SimpleTextParser(reader.ReadLine());
